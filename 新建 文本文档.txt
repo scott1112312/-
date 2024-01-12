@@ -1,0 +1,38 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+}
+
+#image-slider {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+}
+
+#image-slider img {
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}

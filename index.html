@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>南辛庄画廊</title>
+    <title>迷宫探险</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>南辛庄画廊</h1>
-    </header>
-    <main>
-        <div id="image-slider">
-            <div class="slide" id="slide1">
-                <img src="path/to/image1.jpg" alt="Image Description 1">
-                <div class="caption">Description for Image 1</div>
-            </div>
-            <div class="slide" id="slide2">
-                <img src="path/to/image2.jpg" alt="Image Description 2">
-                <div class="caption">Description for Image 2</div>
-            </div>
-            <!-- Add more slides as needed -->
-        </div>
-        <button id="prevBtn">Previous</button>
-        <button id="nextBtn">Next</button>
-    </main>
+    <div class="app">
+        <header>
+            <h1>迷宫探险</h1>
+            <p>使用方向键（或点击屏幕上的箭头）引导冒险者从左上角走到右下角出口。</p>
+        </header>
+        <main>
+            <section class="board">
+                <canvas id="maze" width="600" height="600" aria-label="迷宫画布"></canvas>
+                <div class="status" id="status">按下开始生成新的迷宫吧！</div>
+            </section>
+            <section class="controls">
+                <button id="newMaze">生成新迷宫</button>
+                <button id="reset">重置当前位置</button>
+            </section>
+            <section class="touch-controls" aria-label="触控方向键">
+                <div class="row">
+                    <button class="dir" data-move="up">⬆️</button>
+                </div>
+                <div class="row">
+                    <button class="dir" data-move="left">⬅️</button>
+                    <button class="dir" data-move="down">⬇️</button>
+                    <button class="dir" data-move="right">➡️</button>
+                </div>
+            </section>
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
